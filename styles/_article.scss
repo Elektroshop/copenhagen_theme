@@ -46,6 +46,8 @@
     margin-bottom: 10px;
   }
 
+ 
+
   &-title {
     @include tablet {
       flex-basis: 100%; /* Take entire row */
@@ -71,19 +73,21 @@
   }
 
   &-meta {
-    display: inline-block;
-    vertical-align: middle;
+    display: none;
+    
   }
 
   &-body {
     @include content-body;
     > p:last-child { margin-bottom: 0; }
-  }
+  
+  } 
 
   &-content {
     line-height: 1.6;
     margin: 40px 0;
     word-wrap: break-word;
+
   }
 
   &-footer {

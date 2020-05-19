@@ -12,9 +12,9 @@
         <h3 class="collapsible-sidebar-title sidenav-title">{{t 'articles_in_section'}}</h3>
         <ul>
           {{#each section.articles}}
-            <li>
+            <li><span>
               <a href="{{url}}" class="sidenav-item {{#is id ../article.id}}current-article{{/is}}">{{title}}</a>
-            </li>
+            </span></li>
           {{/each}}
         </ul>
         {{#if section.more_articles}}
@@ -78,7 +78,7 @@
                     <span class="attachment-meta-item meta-data">{{size}}</span>
                     <a href="{{url}}" target="_blank" class="attachment-meta-item meta-data">Download</a>
                   </div>
-                </li>
+               </li>
               {{/each}}
             </ul>
           </div>
@@ -128,7 +128,10 @@
           {{related_articles}}
         {{/if}}
       </section>
+      
+      {{!--
       {{#if settings.show_article_comments}}
+      
         <div class="article-comments" id="article-comments">
           <section class="comments">
             <header class="comment-overview">
@@ -204,7 +207,7 @@
                       </div>
                     </div>
                   </div>
-                </li>
+               </li>
               {{/each}}
             </ul>
 
@@ -226,6 +229,7 @@
           </section>
         </div>
       {{/if}}
+      --}}
     </article>
   </div>
 </div>
